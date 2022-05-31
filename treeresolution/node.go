@@ -1,4 +1,4 @@
-package main
+package treeresolution
 
 // node is a struct that represents a node in a tree.
 type node struct {

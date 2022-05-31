@@ -1,3 +1,3 @@
-module github.com/gbeletti/tree-exercise
+module github.com/gbeletti/brackets-exercise
 
 go 1.18

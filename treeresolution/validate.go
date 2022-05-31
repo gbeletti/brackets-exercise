@@ -1,4 +1,4 @@
-package main
+package treeresolution
 
 import "log"
 
@@ -14,9 +14,9 @@ var rightBrackets = map[rune]rune{
 	')': '(',
 }
 
-func validateInput(input []rune) (ok bool, index int) {
-	inputLen := len(input)
-	if inputLen == 0 { // if input is empty
+// validateInput validates the input runes
+func ValidateInput(input []rune) (ok bool, index int) {
+	if len(input) == 0 { // if input is empty
 		return
 	}
 	var tr *tree

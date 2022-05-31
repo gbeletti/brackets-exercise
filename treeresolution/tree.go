@@ -1,4 +1,4 @@
-package main
+package treeresolution
 
 type tree struct {
 	root   *node

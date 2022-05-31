@@ -1,6 +1,10 @@
-package main
+package treeresolution_test
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/gbeletti/brackets-exercise/treeresolution"
+)
 
 func TestValidateInput(t *testing.T) {
 	tcases := []struct {
@@ -55,7 +59,7 @@ func TestValidateInput(t *testing.T) {
 
 func testValidateInput(t *testing.T, input string, expectedOK bool, expectedIndex int) {
 	inp := []rune(input)
-	ok, index := validateInput(inp)
+	ok, index := treeresolution.ValidateInput(inp)
 	if ok != expectedOK {
 		t.Errorf("expected ok to be %t, but got %t", expectedOK, ok)
 	}

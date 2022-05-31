@@ -4,11 +4,13 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/gbeletti/brackets-exercise/stackresolution"
 )
 
 func main() {
 	everything := strings.Join(os.Args[1:], "")
-	ok, index := validateInput([]rune(everything))
+	ok, index := stackresolution.ValidateInput([]rune(everything))
 	if ok {
 		fmt.Printf("input %s is valid\n", everything)
 		return

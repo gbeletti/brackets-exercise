@@ -1,7 +1,5 @@
 package stackresolution
 
-import "log"
-
 var leftBrackets = map[rune]rune{
 	'{': '}',
 	'[': ']',
@@ -28,7 +26,6 @@ func ValidateInput(input []rune) (ok bool, index int) {
 		}
 		leftBracket, okRight := rightBrackets[r]
 		if !okRight {
-			log.Printf("invalid character:[%c]\n", r)
 			index = i
 			return
 		}

@@ -19,11 +19,10 @@ func validateInput(input []rune) (ok bool, index int) {
 	if inputLen == 0 { // if input is empty
 		return
 	}
-	tr := newTree()
+	var tr *tree
 	var err error
 	for i, r := range input {
-		if tr.IsComplete() {
-			log.Printf("tree is complete, going to next character i [%d] rune [%c]", i, r)
+		if tr == nil || tr.IsComplete() {
 			tr = newTree()
 		}
 		nextNode := newNode(tr.cursor.Current, r, i)

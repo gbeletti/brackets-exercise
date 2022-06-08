@@ -12,7 +12,7 @@ var rightBrackets = map[rune]rune{
 	')': '(',
 }
 
-// validateInput validates the input string
+// ValidateInput validates the input string
 func ValidateInput(input []rune) (ok bool, index int) {
 	if len(input) == 0 { // if input is empty
 		return
